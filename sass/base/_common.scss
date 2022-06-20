@@ -1,0 +1,81 @@
+body {
+    color: $text-color;
+    font-family: roboto, sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 480px;
+    // @media screen and (max-width:($mobile - 0.02px)) {
+    //     width: calc(100% - 30px);
+    // }
+    
+    
+    // @media screen and (min-width: 480px) and (max-width:($tablet - 0.02px)) {
+    //     width: 480px;
+    // }
+    
+        
+    @media screen and (min-width: $tablet) and (max-width:($desktop - 0.02px)) {
+        width: 768px;        
+    }
+
+    @media screen and (min-width:$desktop) {
+        width: 1200px;        
+    }
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $main-background;
+}
