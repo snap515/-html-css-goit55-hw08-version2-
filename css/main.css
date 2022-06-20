@@ -173,6 +173,8 @@ button {
 }
 
 .menu-button {
+  position: -webkit-sticky;
+  position: sticky;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -195,7 +197,6 @@ button {
 }
 
 .menu-button.is-open .icon-cross {
-  position: fixed;
   display: block;
   color: current;
 }
@@ -218,7 +219,6 @@ button {
     top: 0;
     left: 0;
     z-index: 10;
-    overflow: hidden;
     display: none;
     width: 100vw;
     height: 100vh;
