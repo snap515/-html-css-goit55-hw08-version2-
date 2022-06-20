@@ -149,7 +149,9 @@
 }
 
 .footer-form__input {
-    @include mq(not-desktop){
+    width:100%;
+    
+    @include mq(tablet-only){
         width: 450px;
     }
     @include mq(desktop) {
