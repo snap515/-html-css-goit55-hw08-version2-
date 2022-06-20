@@ -10,7 +10,7 @@
 
 .features-item {
     @include mq(mobile-only){
-        width: 450px;
+        max-width: 450px;
         &:not(:last-child){
             margin-bottom: 30px;
         }
@@ -18,7 +18,7 @@
     
     @include mq(tablet-only) {
         display: inline-block;
-        width: 354px;
+        max-width: 354px;
         &:nth-child(2n+1){
             margin-right: 30px;
         }
@@ -28,7 +28,7 @@
     }      
 
     @include mq(desktop) {
-        width: 270px;
+        max-width: 270px;
         &:not(:last-child) {
             margin-right: 30px;
         }

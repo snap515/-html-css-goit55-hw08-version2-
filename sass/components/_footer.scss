@@ -148,10 +148,13 @@
     }
 }
 
+.footer-form__label {
+    max-width: 100%;
+}
+
 .footer-form__input {
-    width:100%;
-    
-    @include mq(tablet-only){
+    @include mq(not-desktop){
+        max-width:100%;
         width: 450px;
     }
     @include mq(desktop) {

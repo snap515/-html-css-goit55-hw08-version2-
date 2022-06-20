@@ -53,6 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // max-width: 100%;
 }
 
 .menu-button {
@@ -74,6 +75,7 @@
 }
 
 .menu-button.is-open .icon-cross{
+    position: fixed;
     display:block;
     color: current;
     }
@@ -92,15 +94,15 @@
 
 .menu-container {
     @include mq(mobile-only) {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 10;
         overflow: hidden;
 
         display: none;
-        width: 100%;
-        height: auto;
+        width: 100vw;
+        height: 100vh;
         padding: 48px 40px;
 
         background-color:$white-color;
@@ -113,6 +115,7 @@
     @include mq(tablet) {
     display: flex;
     align-items: center;
+    justify-content: end;
     }
 }
 
@@ -140,12 +143,13 @@
 
     @include mq(mobile-only) {
         display: block;
+        margin-top: 0;
+        margin-bottom: auto;
     }
 
     @include mq(tablet-only){
         display: flex;
         align-items: center;
-        margin-right: 84px;
     }
     @include mq(desktop){
         display: flex;
@@ -222,11 +226,13 @@
         flex-direction: column-reverse;
 
         text-align: start;
-        margin-top: 302px;
+        margin-top: auto;
+        margin-bottom: 64px;
     }
 
     @include mq(tablet-only) {
         display: block;
+        margin-left: 84px;
     }
     
     @include mq(desktop) {
@@ -255,9 +261,10 @@
     }
 
     @include mq(desktop){
-        margin-right: 30px;
+        &:not(:last-child){
+            margin-right: 30px;
+        }
     }
-    
 }
 
 .contacts__link {  
@@ -282,6 +289,7 @@
         font-size: 12px;
     }
     @include mq(desktop) {
+        font-size: 14px;
         padding-top: 32px;
         padding-bottom: 32px;     
     }
@@ -291,18 +299,21 @@
 .contacts__icon {
     display: none;
 
-    @include mq(tablet) {
+    @include mq(tablet-only) {
+        display: flex;
+        margin-right: 8px;
+        fill: currentColor;
+        
+    }
+
+    @include mq(desktop) {
         display: flex;
         margin-right: 10px;
         fill: currentColor;
-        
     }
 }
 
 .mobile-socials {
-    @include mq(mobile-only){
-        margin-top: 64px;
-    }
     @include mq(tablet){
         display: none;
     }

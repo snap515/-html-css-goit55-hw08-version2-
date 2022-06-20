@@ -12,7 +12,10 @@
 }
 
 .section__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @include mq(desktop){
+        margin-bottom: 50px;
+    }
     color: $title-color;
 
     font-weight: 700;
