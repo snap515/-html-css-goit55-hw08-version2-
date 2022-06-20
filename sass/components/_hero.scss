@@ -3,7 +3,7 @@
     margin-right: auto;
 
     @include mq(mobile-only){
-        width: 480px;
+        max-width: 480px;
         // max-width: 480px;
         // width: 100%;
         height: 400px;
