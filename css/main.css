@@ -172,40 +172,45 @@ button {
           justify-content: space-between;
 }
 
-.menu-button {
-  position: -webkit-sticky;
-  position: sticky;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border: none;
+.menu-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  z-index: 100;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
-  .menu-button {
+  .menu-toggle {
     display: none;
   }
 }
 
-.menu-button .icon-cross {
+.menu-toggle .icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.menu-toggle.is-open .icon-cross {
   display: block;
   color: current;
 }
 
-.menu-button:hover .icon-cross, .menu-button:focus .icon-cross {
+.menu-toggle:hover .icon-cross, .menu-toggle:focus .icon-cross {
   fill: #2196f3;
 }
 
-.menu-button:hover .icon-menu, .menu-button:focus .icon-menu {
+.menu-toggle:hover .icon-menu, .menu-toggle:focus .icon-menu {
   fill: #2196f3;
 }
 
@@ -218,16 +223,28 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
-    display: none;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
     background-color: #ffffff;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   }
   .menu-container.is-open {
-    display: block;
-    margin: 0 auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -243,6 +260,13 @@ button {
         -ms-flex-pack: end;
             justify-content: end;
   }
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
 }
 
 .menu-container .icon-cross {
@@ -368,8 +392,7 @@ button {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     text-align: start;
-    margin-top: auto;
-    margin-bottom: 64px;
+    margin-bottom: auto;
   }
 }
 
