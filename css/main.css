@@ -90,10 +90,14 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
-  .section--big-padding {
-    padding-top: 100px;
+  .section {
+    padding-top: 94px;
     padding-bottom: 94px;
   }
+}
+
+.section--no-top-padding {
+  padding-top: 0px;
 }
 
 .header {
@@ -539,8 +543,6 @@ button {
 
 @media screen and (max-width: 767.98px) {
   .section__hero {
-    max-width: 480px;
-    height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Hero/hero-img-mob.png);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Hero/hero-img-mob.png);
   }
@@ -759,6 +761,13 @@ button {
 @media screen and (min-width: 1200px) {
   .section__title {
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 

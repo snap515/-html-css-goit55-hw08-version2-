@@ -77,10 +77,17 @@ button {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: $main-background;
-    &--big-padding{
-        @include mq(desktop){
-            padding-top: 100px;
-            padding-bottom: 94px;
-        }
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    // &--big-padding{
+    //     @include mq(desktop){
+    //         padding-top: 100px;
+    //         padding-bottom: 94px;
+    //     }
+    // }
+    &--no-top-padding {
+        padding-top: 0px;
     }
 }
