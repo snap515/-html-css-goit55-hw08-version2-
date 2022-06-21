@@ -232,7 +232,7 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     padding: 48px 40px;
     background-color: #ffffff;
     -webkit-transform: translateX(100%);
