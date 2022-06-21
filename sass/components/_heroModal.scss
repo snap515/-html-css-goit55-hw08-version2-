@@ -22,7 +22,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%);
     z-index: 100;
 
     max-width: calc(100% - 30px);
@@ -44,7 +44,7 @@
     transition: transform $transition-duration $transition-timing-function;
 
     .backdrop.is-hidden & {
-        transform: translate(-50%, -50%) scale(0.9);
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -91,7 +91,6 @@
 }
 
 .form__label {
-    display: inline-block;
     width: 100%;
 
     font-size: 12px;
@@ -105,18 +104,6 @@
     margin-top: 4px;
     padding: 11px 12px 11px 43px;
 
-    max-width:100%;
-    @include mq(tablet-only){
-        width: 370px;
-    }
-
-    @include mq(mobile-only) {
-        width: 370px;
-    }
-
-    @include mq(desktop){
-        width: 448px;
-    }
     height: 40px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
